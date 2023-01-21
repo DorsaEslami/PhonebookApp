@@ -1,0 +1,44 @@
+.dashboard {
+  width: 100%;
+  height: 100%;
+}
+
+.loading {
+  width: 100%;
+  height: calc(100% - 60px);
+}
+
+.loading-loading-div {
+  width: 24px;
+  height: 24px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 52px;
+}
+
+.loading-loading-div .ant-spin-dot-item {
+  background-color: #1687A7;
+}
+
+.loading-img {
+  width: 359.38px;
+  height: 359.38px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 60px;
+}
+
+.loading-text {
+  width: 177px;
+  height: 36px;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 150%;
+  text-align: right;
+  color: #404C53;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 29.5px;
+}/*# sourceMappingURL=dashboard.css.map */

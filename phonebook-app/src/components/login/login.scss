@@ -1,0 +1,92 @@
+@use "sass:map";
+@use '../sharedCSS/colors';
+
+.login-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eeeae5;
+
+
+  .main-content-row {
+    width: 80%;
+    height: 80%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 44px 4px rgb(193 185 185 / 75%);
+
+    .login-image-col {
+      width: 100%;
+      height: 100%;
+      border-radius: 8px 0 0 8px;
+      background-color: #ffffff;
+
+      .login-image {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .login-form-col {
+      width: 100%;
+      height: 100%;
+      border-radius: 0 8px 8px 0;
+      background-color: #ffffff;
+      padding: 5%;
+
+      .welcome-title {
+        width: 100%;
+        height: 20%;
+        box-sizing: border-box;
+        margin: 0;
+        padding-left: 30%;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: map.get(colors.$light-theme, 'black');
+      }
+
+      .login-form {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-top: 10%;
+
+        .ant-form-item .ant-form-item-label>label {
+          font-size: 0.875rem;
+        }
+
+        .ant-btn>span {
+          font-weight: 600;
+          font-size: 0.75rem;
+        }
+
+        .ant-form-item {
+          width: 100%;
+          margin-bottom: 26px;
+        }
+
+        .ant-row {
+          width: 100%;
+        }
+
+        .ant-form-item-label {
+          width: 25%;
+          text-align: left;
+        }
+
+        .ant-form-item-control {
+          width: 63%;
+        }
+
+        .login-submit-button {
+          width: 75%;
+          margin-top: 4%;
+        }
+      }
+    }
+  }
+}

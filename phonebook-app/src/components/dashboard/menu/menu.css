@@ -1,0 +1,249 @@
+.navbar {
+  position: relative;
+  top: 0px;
+  width: 100%;
+  height: 60px;
+  background: #026566;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
+  border-radius: 0px 0px 20px 20px;
+  padding: 5px 30px;
+  -webkit-border-radius: 0px 0px 20px 20px;
+  -moz-border-radius: 0px 0px 20px 20px;
+  -ms-border-radius: 0px 0px 20px 20px;
+  -o-border-radius: 0px 0px 20px 20px;
+}
+.navbar .ant-menu-light {
+  color: #fff;
+  background-color: #026566;
+}
+.navbar .logo {
+  position: absolute;
+  width: 41.67px;
+  height: 40px;
+  right: 30px;
+  top: calc(100% - 48px);
+}
+.navbar .divider {
+  position: absolute;
+  top: 7px;
+  width: 0px;
+  height: 45px;
+  background-color: #f2f5f8;
+  border-left: 2px solid #f2f5f8;
+  right: 170.67px;
+}
+.navbar .menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  width: calc(100% - 160px);
+  height: 50px;
+  background: #026566;
+  border-color: #026566;
+  border-radius: 0px 0px 40px 40px;
+}
+
+.my-holoo-header.ant-menu-horizontal > .ant-menu-submenu {
+  padding: 0;
+  margin-left: 16px;
+}
+
+.my-holoo-header .ant-menu-submenu-title {
+  direction: ltr;
+}
+
+.my-holoo-header .ant-menu-submenu-title .ant-menu-item-icon {
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+.my-holoo-header .my-holoo-sub-menu-title .ant-menu-submenu-title .anticon-down {
+  margin-right: 2px !important;
+  margin-left: 0px !important;
+}
+
+.my-holoo-header .my-holoo-sub-menu-title .ant-menu-submenu-title .anticon-down svg {
+  position: absolute;
+  font-size: 0.625rem;
+  left: calc(50% - 5px);
+  top: calc(52% - 2.75px + 0.25px);
+  color: #FFFFFF;
+}
+
+.my-holoo-header .ant-menu-submenu-title .ant-menu-item-icon + span {
+  margin-left: 0px !important;
+}
+
+.my-holoo-header .profile-span {
+  margin-left: 0px !important;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 30px;
+  top: 6px;
+}
+
+.my-holoo-header .profile-span .ant-menu-submenu-title {
+  width: 40px;
+  height: 40px;
+}
+
+.my-holoo-header .profile-span .anticon {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 0px !important;
+}
+
+.my-holoo-header .profile-span .anticon svg {
+  position: absolute;
+  font-size: 2.5rem;
+  left: calc(50% - 15px);
+  top: calc(77% - 20px);
+}
+
+.my-holoo-header .ant-menu-title-content {
+  color: #ffffff !important;
+  font-weight: 400;
+  font-size: 0.8125rem;
+  line-height: 200%;
+  box-shadow: none;
+}
+
+.my-holoo-header-overflow-span {
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+.my-holoo-header-overflow-span svg {
+  position: absolute;
+  font-size: 1rem;
+  left: calc(50% - 7px);
+  top: calc(52% - 7px);
+  color: #FFFFFF;
+}
+
+.my-holoo-sub-menu-title::after {
+  border-bottom: none !important;
+}
+
+.my-holoo-sub-menu-popup.ant-menu-submenu > .ant-menu {
+  background: #FFFFFF;
+  border: 1px solid rgba(15, 30, 39, 0.04);
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.08);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  border-radius: 8px;
+  min-width: 163px !important;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.my-holoo-sub-menu-popup .ant-menu-item,
+.my-holoo-sub-menu-popup .my-holoo-sub-menu-level-one-title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
+  height: 40px;
+  margin: 8px !important;
+  padding: 6px 8px 6px 8px;
+  direction: ltr !important;
+  border-radius: 6px !important;
+  -webkit-border-radius: 6px !important;
+  -moz-border-radius: 6px !important;
+  -ms-border-radius: 6px !important;
+  -o-border-radius: 6px !important;
+}
+
+.my-holoo-sub-menu-popup .ant-menu-submenu-title .ant-menu-submenu-arrow {
+  display: none;
+}
+
+.my-holoo-sub-menu-popup .ant-menu-title-content {
+  font-weight: 400;
+  font-size: 0.8125rem;
+  line-height: 200%;
+  text-align: right;
+  color: #0F1E27;
+}
+
+.my-holoo-sub-menu-popup .ant-menu-item-icon,
+.my-holoo-sub-menu-popup .my-holoo-sub-menu-level-one-title .ant-menu-item-icon {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  margin-left: 0px !important;
+}
+
+.my-holoo-sub-menu-popup .ant-menu-item-icon svg,
+.my-holoo-sub-menu-popup .my-holoo-sub-menu-level-one-title .ant-menu-item-icon svg {
+  position: absolute;
+  font-size: 0.75rem;
+  left: calc(50% - 3.25px - 0.75px);
+  top: calc(50% - 6px - 0px);
+  color: #0F1E27;
+}
+
+.my-holoo-sub-menu-popup .my-holoo-sub-menu-level-one-title .ant-menu-submenu-title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  padding: 0;
+  margin: 0;
+}
+
+.my-holoo-sub-menu-popup .ant-menu-vertical.ant-menu-sub:not([class*=-active])::-webkit-scrollbar {
+  width: 2px;
+}
+
+.my-holoo-sub-menu-popup .ant-menu-vertical.ant-menu-sub:not([class*=-active])::-webkit-scrollbar-track {
+  border: 1px solid #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.my-holoo-sub-menu-popup .ant-menu-vertical.ant-menu-sub:not([class*=-active])::-webkit-scrollbar-thumb {
+  border: 1px solid #026566;
+}
+
+.my-holoo-sub-menu-popup .ant-menu-vertical.ant-menu-sub:not([class*=-active])::-webkit-scrollbar-thumb:hover {
+  border: 1px solid #026566;
+}
+
+.my-holoo-sub-menu-popup .ant-menu-vertical.ant-menu-sub:not([class*=-active])::-webkit-scrollbar-button:start:decrement {
+  height: 5%;
+}
+
+.my-holoo-sub-menu-popup .ant-menu-vertical.ant-menu-sub:not([class*=-active])::-webkit-scrollbar-button:end:increment {
+  height: 5%;
+}
+
+.my-holoo-sub-menu-popup .ant-menu-item:hover,
+.my-holoo-sub-menu-popup .ant-menu-submenu-open,
+.my-holoo-sub-menu-popup .ant-menu-submenu-active,
+.my-holoo-sub-menu-popup .my-holoo-sub-menu-level-one-title .ant-menu-submenu-title:hover {
+  background-color: #F2F5F8 !important;
+}
+
+.my-holoo-sub-menu-popup .ant-menu-item:active,
+.my-holoo-sub-menu-popup .my-holoo-sub-menu-level-one-title .ant-menu-submenu-title:active {
+  background-color: #F2F5F8 !important;
+}
+
+.my-holoo-sub-menu-popup .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: #ffffff;
+}
+
+.my-holoo-menu-item-no-permission {
+  display: none !important;
+}/*# sourceMappingURL=menu.css.map */
