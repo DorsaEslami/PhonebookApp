@@ -1,5 +1,5 @@
 @use "sass:map";
-@use '../sharedCSS/colors';
+@use '../shared/css/colors';
 
 .login-container {
   width: 100%;
@@ -87,6 +87,34 @@
           margin-top: 4%;
         }
       }
+    }
+  }
+}
+
+.login-notification {
+  &.ant-notification-notice {
+    width: fit-content;
+    padding: 12px 12px 12px 20px;
+    background: #ffdada;
+  }
+
+  .ant-notification-notice-message {
+    font-family: 'Montserrat';
+    color: map.get(colors.$light-theme, 'black');
+    font-weight: 600;
+    font-size: 0.875rem !important;
+    margin-bottom: 0;
+    margin-right: 10px;
+    color: map.get(colors.$light-theme, 'black');
+  }
+
+  .ant-notification-notice-close {
+    top: 12px;
+    inset-inline-end: 5px;
+    color: map.get(colors.$light-theme, 'black');
+
+    &:hover {
+      color: map.get(colors.$light-theme, 'black');
     }
   }
 }

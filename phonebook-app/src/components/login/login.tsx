@@ -1,19 +1,21 @@
 /* #region  [- import -] */
-import { Form, Row, Col, Input, Button } from "antd";
+import { Form, Row, Col, Input, Button, message } from "antd";
 import { ChangeEvent, FC, useState } from "react"
 import './login.css';
 import { useNavigate } from "react-router";
+import Notification from "../shared/components/notification";
 /* #endregion */
 
 const Login: FC = (): JSX.Element => {
 
   const navigate = useNavigate();
   const [username, setUsername] = useState<string>("dorsa");
-  const [password, setPassword] = useState<string>("dorsa");
+  const [password, setPassword] = useState<string>("dorsa12345");
 
   const login = () => {
     localStorage.setItem('token', 'dorsa');
     navigate("/dashboard");
+    Notification({ message: 'Welcome to phonebook app.' });
   }
 
   return (
@@ -53,10 +55,10 @@ const Login: FC = (): JSX.Element => {
                 { required: true, message: 'Please input your password!' },
                 () => ({
                   validator(_, value) {
-                    if (value === 'dorsa') {
+                    if (value === 'dorsa12345') {
                       return Promise.resolve();
                     }
-                    return Promise.reject(new Error('Password is "dorsa".'));
+                    return Promise.reject(new Error('Password is "dorsa12345".'));
                   },
                 }),
               ]}
@@ -64,7 +66,7 @@ const Login: FC = (): JSX.Element => {
             >
               <Input.Password name="password" value={password} allowClear={true} onChange={(event: ChangeEvent<HTMLInputElement>) => setPassword(event.target.value)} />
             </Form.Item>
-            <Button type="primary" htmlType="submit" className="login-submit-button">Submit</Button>
+            <Button type="primary" htmlType="submit" className="login-submit-button">Login</Button>
           </Form>
         </Col>
       </Row>

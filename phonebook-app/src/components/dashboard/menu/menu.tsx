@@ -1,48 +1,47 @@
 import { Menu as AntdMenu, MenuProps } from 'antd';
 import { useNavigate } from "react-router";
-import { DownOutlined, PoweroffOutlined } from '@ant-design/icons';
+import { HomeOutlined, ContactsOutlined, PoweroffOutlined, LockOutlined } from '@ant-design/icons';
 import ProfileIcon from './profileIcon';
 import './menu.css';
-import Logo from './logo';
+import { SelectInfo } from '../../../../node_modules/rc-menu/lib/interface';
 
-const Menu = () => {
+/* #region  [- interface -] */
+interface Props {
+  onClickMenueItem: (info: SelectInfo) => void,
+}
+/* #endregion */
+const Menu = ({ onClickMenueItem }: Props): JSX.Element => {
   const navigate = useNavigate();
   /* #region  [- items -] */
   const items: MenuProps['items'] = [
 
     {
-      label: 'Dashboard',
-      key: 'etelaat-paye',
-      icon: <DownOutlined />,
-      className: "my-holoo-sub-menu-title",
-      popupClassName: "my-holoo-sub-menu-popup",
-      popupOffset: [-110, 6],
+      label: 'Home',
+      key: 'home',
     },
     {
-      label: 'Basic Info',
-      key: 'etelaat-paye',
-      icon: <DownOutlined />,
-      className: "my-holoo-sub-menu-title",
-      popupClassName: "my-holoo-sub-menu-popup",
-      popupOffset: [-110, 6],
-      children: [
-        {
-          label: 'Contacts',
-          key: 'etelaat-paye-sazman',
-        },
-
-      ]
+      label: 'Contacts',
+      key: 'contacts',
     },
     {
-      key: 'profail',
+      label: '',
+      key: 'Profile',
       icon: <ProfileIcon />,
       className: "profile-span",
-      popupClassName: "my-holoo-sub-menu-popup",
-      popupOffset: [-125, 16],
+      popupClassName: "sub-menu-popup",
+      popupOffset: [-165, 5],
       children: [
         {
+          label: 'Change Password',
+          key: 'change-password',
+          icon: <LockOutlined />,
+          onClick: () => {
+            navigate('/changePassword');
+          }
+        },
+        {
           label: 'Logout',
-          key: 'khoruj',
+          key: 'logout',
           icon: <PoweroffOutlined />,
           onClick: () => {
             localStorage.clear();
@@ -64,7 +63,7 @@ const Menu = () => {
         mode="horizontal"
         items={items}
         disabledOverflow={true}
-        //onSelect={onClickMenueItem}
+        onSelect={onClickMenueItem}
         selectedKeys={[]}
       >
       </AntdMenu>

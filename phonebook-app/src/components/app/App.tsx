@@ -10,7 +10,7 @@ import {
 import ProtectedRoutes from './protectedRoutes';
 import Login from '../login/login';
 import Dashboard from '../dashboard/dashboard';
-
+import ChangePassword from '../dashboard/changePassword/changePssword';
 /* #endregion */
 const App: FC = (): JSX.Element => {
   return (
@@ -20,6 +20,7 @@ const App: FC = (): JSX.Element => {
           <Route path="/" element={<Navigate to="/login" />} />
           <Route path="/login" element={<Login />} />
           <Route path="/dashboard" element={<ProtectedRoutes children={<Dashboard />} />} />
+          <Route path="/changePassword" element={<ProtectedRoutes children={<ChangePassword />} />} />
           <Route path="*" element={<p className='route-not-found body-strong'>Not Found</p>} />
         </Routes>
       </BrowserRouter>

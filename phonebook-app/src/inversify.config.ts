@@ -1,9 +1,13 @@
 import { Container } from "inversify";
+import { ContactService } from "./services/implements/contactService";
+import { IContactService } from "./services/interfaces/IContactService";
 
-// export const TYPES = {
-//   IAuthService: Symbol("IAuthService")
-// };
+export const TYPES = {
+  IContactService: Symbol("IContactService")
+};
 
-// var container = new Container();
+var container = new Container();
 
-// container.bind<IAuthService>(TYPES.IAuthService).to(AuthService);
+container.bind<IContactService>(TYPES.IContactService).to(ContactService);
+
+export default container;

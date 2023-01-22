@@ -5,7 +5,7 @@ import App from './components/app/App';
 import reportWebVitals from './reportWebVitals';
 import { ConfigProvider } from 'antd';
 import { Provider } from "react-redux";
-import store from './redux/config/configureStore';
+import store from './store/config/configureStore';
 /* #endregion */
 
 type ThemeData = {
@@ -18,10 +18,10 @@ type ThemeData = {
 
 const defaultData: ThemeData = {
   borderRadius: 6,
-  colorPrimary: '#1687A7',
+  colorPrimary: '#127591',
   colorTextBase: '#0F1E27',
   fontFamily: 'Montserrat',
-  colorSuccess: '#1687A7'
+  colorSuccess: '#127591'
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
