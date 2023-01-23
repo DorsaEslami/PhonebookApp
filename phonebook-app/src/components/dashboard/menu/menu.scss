@@ -99,7 +99,7 @@
   .ant-menu-item:hover,
   .ant-menu-item:active {
     color: map.get(colors.$light-theme, 'black') !important;
-    background-color: #F2F5F8 !important;
+    background-color: map.get(colors.$light-theme, 'background') !important;
     font-size: 0.875rem;
     border-radius: 6px;
     -webkit-border-radius: 6px;

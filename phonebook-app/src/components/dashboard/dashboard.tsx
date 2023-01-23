@@ -4,7 +4,7 @@ import './dashboard.css';
 import Menu from './menu/menu';
 import Loading from './loading';
 import { SelectInfo } from '../../../node_modules/rc-menu/lib/interface';
-import DefaultContent from './defaultContent';
+import DefaultContent from './defaultContent/defaultContent';
 import Contacts from './contacts/contacts';
 /* #endregion */
 

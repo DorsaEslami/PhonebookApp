@@ -8,6 +8,7 @@ import { Provider } from "react-redux";
 import store from './store/config/configureStore';
 /* #endregion */
 
+/* #region  [- defaultData -] */
 type ThemeData = {
   borderRadius: number;
   colorPrimary: string;
@@ -15,7 +16,6 @@ type ThemeData = {
   fontFamily: string;
   colorSuccess: string
 };
-
 const defaultData: ThemeData = {
   borderRadius: 6,
   colorPrimary: '#127591',
@@ -24,7 +24,10 @@ const defaultData: ThemeData = {
   colorSuccess: '#127591'
 };
 
+/* #endregion */
+
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
+
 root.render(
   <ConfigProvider theme={{
     token: {

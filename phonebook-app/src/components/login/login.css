@@ -50,6 +50,7 @@
 }
 .login-container .main-content-row .login-form-col .login-form .ant-form-item .ant-form-item-label > label {
   font-size: 0.875rem;
+  width: 100%;
 }
 .login-container .main-content-row .login-form-col .login-form .ant-btn > span {
   font-weight: 600;
@@ -67,7 +68,13 @@
   text-align: left;
 }
 .login-container .main-content-row .login-form-col .login-form .ant-form-item-control {
-  width: 63%;
+  width: 75%;
+}
+.login-container .main-content-row .login-form-col .login-form .ant-form-item-control .ant-form-item-control-input {
+  width: 100%;
+}
+.login-container .main-content-row .login-form-col .login-form .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content {
+  width: 100%;
 }
 .login-container .main-content-row .login-form-col .login-form .login-submit-button {
   width: 75%;

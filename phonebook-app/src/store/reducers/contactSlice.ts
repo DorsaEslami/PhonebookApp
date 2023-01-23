@@ -5,22 +5,21 @@ import { getContact } from "./contactAction";
 /* #endregion */
 
 interface State {
-  contactList: string[];
+  contactsList: string[];
 }
 
-const initialState: State = { contactList: [] };
+const initialState: State = { contactsList: [] };
 
 
 const contactSlice = createSlice({
   name: "contact",
   initialState,
   reducers: {},
-
   extraReducers: (builder) => {
     builder.addCase(
       getContact.fulfilled,
       (state, action: PayloadAction<string[]>) => {
-        state.contactList = action.payload;
+        state.contactsList = action.payload;
       }
     );
   },

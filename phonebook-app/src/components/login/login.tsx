@@ -1,5 +1,5 @@
 /* #region  [- import -] */
-import { Form, Row, Col, Input, Button, message } from "antd";
+import { Form, Row, Col, Input, Button } from "antd";
 import { ChangeEvent, FC, useState } from "react"
 import './login.css';
 import { useNavigate } from "react-router";
@@ -22,7 +22,7 @@ const Login: FC = (): JSX.Element => {
     <div className="login-container">
       <Row className="main-content-row">
         <Col md={0} lg={12} xl={10} xxl={9} className='login-image-col'>
-          <img src="../img/login.png" alt="login image" className="login-image" />
+          <img src="../img/login.png" alt="login" className="login-image" />
         </Col>
         <Col md={0} lg={0} xl={1} xxl={3}></Col>
         <Col md={24} lg={12} xl={13} xxl={12} className='login-form-col'>

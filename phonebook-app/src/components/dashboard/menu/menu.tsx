@@ -1,6 +1,6 @@
 import { Menu as AntdMenu, MenuProps } from 'antd';
 import { useNavigate } from "react-router";
-import { HomeOutlined, ContactsOutlined, PoweroffOutlined, LockOutlined } from '@ant-design/icons';
+import { PoweroffOutlined, LockOutlined } from '@ant-design/icons';
 import ProfileIcon from './profileIcon';
 import './menu.css';
 import { SelectInfo } from '../../../../node_modules/rc-menu/lib/interface';
@@ -70,4 +70,4 @@ const Menu = ({ onClickMenueItem }: Props): JSX.Element => {
     </div >
   )
 }
-export default Menu;
+export default Menu; 

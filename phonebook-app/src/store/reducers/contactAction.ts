@@ -5,7 +5,7 @@ import container, { TYPES } from "../../inversify.config";
 
 
 export const getContact = createAsyncThunk(
-  "contact/getContact",
+  "contact/getContactStatus",
   async () => {
     const contactService: IContactService = container.get<IContactService>(TYPES.IContactService);
     var response: ContactOutPutDTO = await contactService.getContact();
