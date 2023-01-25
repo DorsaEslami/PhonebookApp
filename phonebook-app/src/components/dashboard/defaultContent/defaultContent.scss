@@ -5,4 +5,70 @@
   width: 100%;
   height: 100%;
   background-color: map.get(colors.$light-theme, 'background');
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: map.get(colors.$light-theme, 'background');
+
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: map.get(colors.$light-theme, 'primary');
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: map.get(colors.$light-theme, 'primary');
+  }
+
+  &::-webkit-scrollbar-track-piece:end {
+    margin-bottom: 30px;
+  }
+
+  &::-webkit-scrollbar-track-piece:start {
+    margin-top: 30px;
+  }
+
+  .pie-chart-col {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .pie-chart {
+      width: 75%;
+      height: 55% !important;
+    }
+
+    .description-card {
+      width: 90%;
+      height: auto;
+
+      .ant-card-head-title {
+        font-size: 1.125rem;
+        font-weight: 800;
+      }
+    }
+  }
+
+  .bar-chart-col {
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+
+    .bar-chart {
+      width: 100%;
+      height: 100% !important;
+    }
+  }
 }

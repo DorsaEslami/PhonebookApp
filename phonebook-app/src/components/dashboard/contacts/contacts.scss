@@ -1,0 +1,98 @@
+@use "sass:map";
+@use '../../shared/css/colors';
+
+
+
+.contacts-container {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: map.get(colors.$light-theme, 'background');
+  padding: 20px;
+
+  .header {
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    font-size: 1.25rem;
+
+    .title {
+      font-weight: 800;
+      font-family: 'Montserrat';
+    }
+  }
+
+  .content {
+    box-sizing: border-box;
+    width: 100%;
+    height: calc(100% - 50px - 15px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 4%;
+    column-gap: 2%;
+    padding: 10px 10px 40px 10px;
+    margin-top: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow-y: scroll;
+
+
+    &::-webkit-scrollbar {
+      width: 3px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: map.get(colors.$light-theme, 'background');
+
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: map.get(colors.$light-theme, 'primary');
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: map.get(colors.$light-theme, 'primary');
+    }
+
+    &::-webkit-scrollbar-track-piece:end {
+      margin-bottom: 20px;
+    }
+
+    &::-webkit-scrollbar-track-piece:start {
+      margin-top: 20px;
+    }
+
+    .card {
+      width: 23%;
+      box-shadow: 0px 0px 13px 2px rgba(230, 230, 230, 1);
+
+      .description {
+        box-sizing: border-box;
+        width: 100%;
+        padding-left: 56px;
+        word-wrap: break-word;
+
+        p {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

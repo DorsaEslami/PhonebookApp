@@ -2,4 +2,57 @@
   width: 100%;
   height: 100%;
   background-color: #F2F5F8;
+  overflow-y: scroll;
+}
+.default-content::-webkit-scrollbar {
+  width: 5px;
+}
+.default-content::-webkit-scrollbar-track {
+  background: #F2F5F8;
+}
+.default-content::-webkit-scrollbar-thumb {
+  background: #127591;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.default-content::-webkit-scrollbar-thumb:hover {
+  background: #127591;
+}
+.default-content::-webkit-scrollbar-track-piece:end {
+  margin-bottom: 30px;
+}
+.default-content::-webkit-scrollbar-track-piece:start {
+  margin-top: 30px;
+}
+.default-content .pie-chart-col {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.default-content .pie-chart-col .pie-chart {
+  width: 75%;
+  height: 55% !important;
+}
+.default-content .pie-chart-col .description-card {
+  width: 90%;
+  height: auto;
+}
+.default-content .pie-chart-col .description-card .ant-card-head-title {
+  font-size: 1.125rem;
+  font-weight: 800;
+}
+.default-content .bar-chart-col {
+  width: 100%;
+  height: 100%;
+  padding: 5%;
+}
+.default-content .bar-chart-col .bar-chart {
+  width: 100%;
+  height: 100% !important;
 }/*# sourceMappingURL=defaultContent.css.map */

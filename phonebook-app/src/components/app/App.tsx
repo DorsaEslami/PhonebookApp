@@ -21,7 +21,7 @@ const App: FC = (): JSX.Element => {
           <Route path="/login" element={<Login />} />
           <Route path="/dashboard" element={<ProtectedRoutes children={<Dashboard />} />} />
           <Route path="/changePassword" element={<ProtectedRoutes children={<ChangePassword />} />} />
-          <Route path="*" element={<p className='route-not-found body-strong'>Not Found</p>} />
+          <Route path="*" element={<p className='route-not-found'>Not Found</p>} />
         </Routes>
       </BrowserRouter>
     </div>

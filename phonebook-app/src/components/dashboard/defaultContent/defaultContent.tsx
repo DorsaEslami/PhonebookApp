@@ -1,9 +1,9 @@
 /* #region  [- import -] */
-import { Pie } from '@ant-design/plots';
+import { Pie, Bar } from '@ant-design/plots';
 import { useEffect, useState } from 'react';
 import { getContact } from '../../../store/reducers/contactAction';
 import { useAppSelector, useAppDispatch } from "../../../store/config/configureStore";
-import { Col, Row } from 'antd';
+import { Col, Row, Card } from 'antd';
 import './defaultContent.css';
 /* #endregion */
 
@@ -43,7 +43,6 @@ const DefaultContent = (): JSX.Element => {
   }, [contactsList])
   /* #endregion */
 
-
   /* #region  [- findTotalPercentageOfAgeSmallerThanTwenty -] */
   const findTotalPercentageOfAgeSmallerThanTwenty = (totalContacts: number) => {
     var percentage: number = Number(((Object.keys(contactsList.filter((item: any) => item.age < 20)).length / totalContacts) * 100).toFixed(2));
@@ -81,8 +80,8 @@ const DefaultContent = (): JSX.Element => {
 
   /* #endregion */
 
-  /* #region  [- data -] */
-  const data = [
+  /* #region  [- pieChartData -] */
+  const pieChartData = [
     {
       type: 'Age<20',
       value: ageSmallerThanTwenty,
@@ -106,10 +105,10 @@ const DefaultContent = (): JSX.Element => {
   ];
   /* #endregion */
 
-  /* #region  [- config -] */
-  const config = {
+  /* #region  [- pieChartConfig -] */
+  const pieChartConfig = {
     appendPadding: 10,
-    data,
+    data: pieChartData,
     angleField: 'value',
     colorField: 'type',
     radius: 0.9,
@@ -130,13 +129,40 @@ const DefaultContent = (): JSX.Element => {
   };
   /* #endregion */
 
+  const barChartData = [
+    {
+      gender: 'Female',
+      total: Object.keys(contactsList.filter((item: any) => item.gender === 'female')).length
+    },
+    {
+      gender: 'Male',
+      total: Object.keys(contactsList.filter((item: any) => item.gender === 'male')).length,
+    },
+
+  ];
+
+  const barChartConfig = {
+    data: barChartData,
+    xField: 'total',
+    yField: 'gender',
+    seriesField: 'gender',
+
+  };
+
   /* #region  [- return -] */
   return (
     <Row className='default-content'>
-      <Col></Col>
-      <Col>
-        <Pie  {...config} />
+      <Col className='bar-chart-col' md={24} lg={12} xl={12} xxl={12}>
+        <Bar {...barChartConfig} className='bar-chart' />
       </Col>
+      <Col className='pie-chart-col' md={24} lg={12} xl={12} xxl={12}>
+        <Pie  {...pieChartConfig} className='pie-chart' />
+        <Card title="Contact's Age View" className='description-card'>
+          <p>Lorem ipsum dolor sit amet. Sed illo voluptatem rem ipsa excepturi aut amet fugit ut sint asperiores ut dolorem nisi ut reiciendis reiciendis quo porro earum. Et blanditiis assumenda et vitae accusantium sed dignissimos provident ut enim voluptatem et nulla numquam aut odio ducimus. Sed velit impedit et voluptate iure qui mollitia voluptas et ratione alias ut ducimus incidunt aut fuga nemo ea quod voluptatibus.</p>
+        </Card>
+      </Col>
+
+
     </Row>
   );
   /* #endregion */
