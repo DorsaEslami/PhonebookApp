@@ -4,6 +4,8 @@ import { PoweroffOutlined, LockOutlined } from '@ant-design/icons';
 import ProfileIcon from './profileIcon';
 import './menu.css';
 import { SelectInfo } from '../../../../node_modules/rc-menu/lib/interface';
+import { useAppDispatch } from '../../../store/config/configureStore';
+import { resetContacts } from '../../../store/reducers/contactSlice';
 
 /* #region  [- interface -] */
 interface Props {
@@ -12,6 +14,7 @@ interface Props {
 /* #endregion */
 const Menu = ({ onClickMenueItem }: Props): JSX.Element => {
   const navigate = useNavigate();
+  const dispatch = useAppDispatch();
   /* #region  [- items -] */
   const items: MenuProps['items'] = [
 
@@ -44,6 +47,7 @@ const Menu = ({ onClickMenueItem }: Props): JSX.Element => {
           key: 'logout',
           icon: <PoweroffOutlined />,
           onClick: () => {
+            dispatch(resetContacts());
             localStorage.clear();
             navigate('/login');
           }

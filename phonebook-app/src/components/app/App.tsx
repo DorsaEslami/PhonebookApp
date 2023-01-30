@@ -11,6 +11,7 @@ import ProtectedRoutes from './protectedRoutes';
 import Login from '../login/login';
 import Dashboard from '../dashboard/dashboard';
 import ChangePassword from '../dashboard/changePassword/changePssword';
+import Contacts from '../dashboard/contacts/contacts';
 /* #endregion */
 const App: FC = (): JSX.Element => {
   return (

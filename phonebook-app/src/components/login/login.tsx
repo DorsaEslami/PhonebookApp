@@ -6,7 +6,7 @@ import { useNavigate } from "react-router";
 import Notification from "../shared/components/notification";
 /* #endregion */
 
-const Login: FC = (): JSX.Element => {
+const Login = (): JSX.Element => {
 
   const navigate = useNavigate();
   const [username, setUsername] = useState<string>("dorsa");

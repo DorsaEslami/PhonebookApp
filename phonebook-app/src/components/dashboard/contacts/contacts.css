@@ -12,8 +12,8 @@
   padding-left: 15px;
   padding-right: 15px;
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
   background-color: #fff;
   border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -23,8 +23,19 @@
   font-size: 1.25rem;
 }
 .contacts-container .header .title {
+  width: 25%;
   font-weight: 800;
   font-family: "Montserrat";
+}
+.contacts-container .header .tool {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 75%;
+}
+.contacts-container .header .tool .search-input {
+  width: 30%;
+  margin-right: 5px;
 }
 .contacts-container .content {
   box-sizing: border-box;
@@ -67,6 +78,9 @@
 }
 .contacts-container .content .card {
   width: 23%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   box-shadow: 0px 0px 13px 2px rgb(230, 230, 230);
 }
 .contacts-container .content .card .description {
@@ -76,5 +90,105 @@
   word-wrap: break-word;
 }
 .contacts-container .content .card .description p {
+  width: 100%;
+}
+
+.delete-modal {
+  width: 45% !important;
+}
+.delete-modal .ant-modal-content {
+  background-color: #F2F5F8;
+  height: 100%;
+  width: 100% !important;
+}
+.delete-modal .ant-modal-content .ant-modal-body {
+  max-height: 50vh;
+  overflow-y: auto;
+}
+.delete-modal .ant-modal-content .ant-modal-body p:first-child {
+  font-size: 1rem;
+  font-weight: 900;
+}
+.delete-modal .ant-modal-content .ant-modal-body p:nth-child(2), .delete-modal .ant-modal-content .ant-modal-body p:nth-child(3), .delete-modal .ant-modal-content .ant-modal-body p:nth-child(4), .delete-modal .ant-modal-content .ant-modal-body p:nth-child(5), .delete-modal .ant-modal-content .ant-modal-body p:nth-child(6) {
+  margin: 0;
+  font-size: 0.875rem;
+  padding-left: 20px;
+}
+.delete-modal .ant-modal-content .ant-modal-body span:first-child {
+  color: red;
+}
+.delete-modal .ant-modal-content .ant-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20px;
+}
+.delete-modal .ant-modal-content .ant-modal-footer .button {
+  width: 130px;
+}
+
+.contact-drawer .ant-drawer-content-wrapper {
+  width: 40vw !important;
+  height: 100vh;
+}
+.contact-drawer .contact-form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.contact-drawer .contact-form .form-content {
+  width: 100%;
+}
+.contact-drawer .contact-form .form-content .ant-form-item-label {
+  text-align: left;
+}
+.contact-drawer .contact-form .submit-button-form-item {
+  width: 100%;
+}
+.contact-drawer .contact-form .submit-button-form-item.ant-form-item {
+  margin-bottom: 2px;
+}
+.contact-drawer .contact-form .submit-button-form-item .cancel-button {
+  width: 49%;
+  margin-right: 2%;
+}
+.contact-drawer .contact-form .submit-button-form-item .submit-button {
+  width: 49%;
+}
+
+.inform-modal {
+  width: 45% !important;
+}
+.inform-modal .ant-modal-content {
+  background-color: #F2F5F8;
+  height: 100%;
+  width: 100% !important;
+}
+.inform-modal .ant-modal-content .ant-modal-body {
+  max-height: 50vh;
+  overflow-y: auto;
+}
+.inform-modal .ant-modal-content .ant-modal-body p:first-child {
+  font-size: 1rem;
+  font-weight: 900;
+}
+.inform-modal .ant-modal-content .ant-modal-body p:nth-child(2), .inform-modal .ant-modal-content .ant-modal-body p:nth-child(3), .inform-modal .ant-modal-content .ant-modal-body p:nth-child(4) {
+  margin: 0;
+  font-size: 0.875rem;
+  padding-left: 20px;
+}
+.inform-modal .ant-modal-content .ant-modal-body span:first-child {
+  color: red;
+}
+.inform-modal .ant-modal-content .ant-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20px;
+}
+.inform-modal .ant-modal-content .ant-modal-footer .button {
   width: 100%;
 }/*# sourceMappingURL=contacts.css.map */

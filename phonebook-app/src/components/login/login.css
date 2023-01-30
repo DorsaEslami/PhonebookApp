@@ -79,29 +79,4 @@
 .login-container .main-content-row .login-form-col .login-form .login-submit-button {
   width: 75%;
   margin-top: 4%;
-}
-
-.login-notification.ant-notification-notice {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 12px 12px 12px 20px;
-  background: #ffdada;
-}
-.login-notification .ant-notification-notice-message {
-  font-family: "Montserrat";
-  color: #0F1E27;
-  font-weight: 600;
-  font-size: 0.875rem !important;
-  margin-bottom: 0;
-  margin-right: 10px;
-  color: #0F1E27;
-}
-.login-notification .ant-notification-notice-close {
-  top: 12px;
-  inset-inline-end: 5px;
-  color: #0F1E27;
-}
-.login-notification .ant-notification-notice-close:hover {
-  color: #0F1E27;
 }/*# sourceMappingURL=login.css.map */

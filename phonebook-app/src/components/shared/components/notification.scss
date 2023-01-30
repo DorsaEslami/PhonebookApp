@@ -1,0 +1,42 @@
+@use "sass:map";
+@use '../../shared/css/colors';
+
+
+.notification {
+  &.ant-notification-notice {
+    width: fit-content;
+    padding: 12px 12px 12px 20px;
+  }
+
+  &.ant-notification-notice-success {
+    background-color: #8de8ab !important;
+  }
+
+  &.ant-notification-notice-error {
+    background-color: #f87b7c !important;
+  }
+
+  .ant-notification-notice-message {
+    font-family: 'Montserrat' !important;
+    color: map.get(colors.$light-theme, 'black');
+    font-weight: 600;
+    font-size: 0.875rem !important;
+    margin-bottom: 0 !important;
+    margin-right: 10px;
+    color: map.get(colors.$light-theme, 'black');
+  }
+
+  .ant-notification-notice-icon {
+    font-size: 1.25rem;
+  }
+
+  .ant-notification-notice-close {
+    top: 12px;
+    inset-inline-end: 5px;
+    color: map.get(colors.$light-theme, 'black');
+
+    &:hover {
+      color: map.get(colors.$light-theme, 'black');
+    }
+  }
+}

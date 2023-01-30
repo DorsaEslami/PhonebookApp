@@ -1,0 +1,32 @@
+.notification.ant-notification-notice {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 12px 12px 12px 20px;
+}
+.notification.ant-notification-notice-success {
+  background-color: #8de8ab !important;
+}
+.notification.ant-notification-notice-error {
+  background-color: #f87b7c !important;
+}
+.notification .ant-notification-notice-message {
+  font-family: "Montserrat" !important;
+  color: #0F1E27;
+  font-weight: 600;
+  font-size: 0.875rem !important;
+  margin-bottom: 0 !important;
+  margin-right: 10px;
+  color: #0F1E27;
+}
+.notification .ant-notification-notice-icon {
+  font-size: 1.25rem;
+}
+.notification .ant-notification-notice-close {
+  top: 12px;
+  inset-inline-end: 5px;
+  color: #0F1E27;
+}
+.notification .ant-notification-notice-close:hover {
+  color: #0F1E27;
+}/*# sourceMappingURL=notification.css.map */
