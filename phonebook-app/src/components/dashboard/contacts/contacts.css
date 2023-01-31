@@ -175,7 +175,7 @@
   font-size: 1rem;
   font-weight: 900;
 }
-.inform-modal .ant-modal-content .ant-modal-body p:nth-child(2), .inform-modal .ant-modal-content .ant-modal-body p:nth-child(3), .inform-modal .ant-modal-content .ant-modal-body p:nth-child(4) {
+.inform-modal .ant-modal-content .ant-modal-body p:nth-child(2), .inform-modal .ant-modal-content .ant-modal-body p:nth-child(3), .inform-modal .ant-modal-content .ant-modal-body p:nth-child(4), .inform-modal .ant-modal-content .ant-modal-body p:nth-child(5) {
   margin: 0;
   font-size: 0.875rem;
   padding-left: 20px;

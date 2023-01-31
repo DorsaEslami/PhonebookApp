@@ -17,7 +17,6 @@ const contactSlice = createSlice({
   initialState,
   reducers: {
     resetContacts: () => initialState
-
   },
   extraReducers: (builder) => {
     builder.addCase(

@@ -170,6 +170,21 @@ const Contacts = (): JSX.Element => {
   }
   /* #endregion */
 
+  /* #region  [- onCloseDrawer -] */
+  const onCloseDrawer = () => {
+    setId(undefined);
+    setIsDrawerOpen(false);
+    form.resetFields();
+  }
+  /* #endregion */
+
+  /* #region  [- onCloseDeleteModal -] */
+  const onCloseDeleteModal = () => {
+    setIsDeleteModalOpen(false);
+    setId(undefined);
+    setFullName('');
+  }
+  /* #endregion */
 
   /* #region  [- return -] */
   return (
@@ -184,7 +199,7 @@ const Contacts = (): JSX.Element => {
           <Drawer
             title={id === undefined ? "Create a new contact" : "Edit Contact"}
             width={720}
-            onClose={() => setIsDrawerOpen(false)}
+            onClose={onCloseDrawer}
             open={isDrawerOpen}
             destroyOnClose={true}
             rootClassName='contact-drawer'
@@ -199,19 +214,19 @@ const Contacts = (): JSX.Element => {
               validateMessages={validateMessages}
             >
               <div className='form-content'>
-                <Form.Item name={['contact', 'firstName']} label="First Name" rules={[{ required: true }]}>
+                <Form.Item name={['contact', 'firstName']} label="First Name" rules={[{ required: true }]} hasFeedback>
                   <Input />
                 </Form.Item>
-                <Form.Item name={['contact', 'lastName']} label="Last Name" rules={[{ required: true }]}>
+                <Form.Item name={['contact', 'lastName']} label="Last Name" rules={[{ required: true }]} hasFeedback>
                   <Input />
                 </Form.Item>
-                <Form.Item name={['contact', 'phone']} label="Phone" rules={[{ required: true }]}>
+                <Form.Item name={['contact', 'phone']} label="Phone" rules={[{ required: true }]} hasFeedback>
                   <Input />
                 </Form.Item>
-                <Form.Item name={['contact', 'email']} label="Email" rules={[{ required: true }, { type: 'email' }]}>
+                <Form.Item name={['contact', 'email']} label="Email" rules={[{ required: true }, { type: 'email' }]} hasFeedback>
                   <Input />
                 </Form.Item>
-                <Form.Item name={['contact', 'age']} label="Age" rules={[{ required: true }, { type: 'number', min: 0, max: 99 }]}>
+                <Form.Item name={['contact', 'age']} label="Age" rules={[{ required: true }, { type: 'number', min: 0, max: 99 }]} hasFeedback>
                   <InputNumber />
                 </Form.Item>
                 <Form.Item name={['contact', 'gender']} label="Gender" initialValue="Male">
@@ -222,7 +237,7 @@ const Contacts = (): JSX.Element => {
                 </Form.Item>
               </div>
               <Form.Item className='submit-button-form-item' wrapperCol={{ span: 24 }}>
-                <Button type="primary" className='cancel-button' onClick={() => setIsDrawerOpen(false)} >
+                <Button type="primary" className='cancel-button' onClick={onCloseDrawer} >
                   Cancel
                 </Button>
                 <Button type="primary" htmlType="submit" className='submit-button' >
@@ -233,7 +248,7 @@ const Contacts = (): JSX.Element => {
           </Drawer>
           <Modal
             open={isInformModalOpen}
-            onCancel={() => setIsInformModalOpen(false)}
+            onCancel={() => { setIsInformModalOpen(false) }}
             destroyOnClose={true}
             className='inform-modal'
             centered
@@ -241,9 +256,10 @@ const Contacts = (): JSX.Element => {
               <Button type='primary' size='large' className='button' key='informModalNoButton' onClick={() => setIsInformModalOpen(false)}>Ok</Button>
             ]} >
             <p>Please note:</p>
-            <p>'dummyjson' is a fake data provider I used in this project.</p>
+            <p>'Dummyjson' is a fake data provider I used in this project.</p>
+            <p>'Adding' or 'Editing' a contact will not add/edit into 'https://dummyjson.com/' server.</p>
             <p>Therefore, you won't be able to see any changes in contacts list.</p>
-            <p>However based on the notification you see on the bottom rigth side of the page you will be able to check if the process has been successfull or not.</p>
+            <p>However, based on the notification you see on the bottom rigth side of the page you will be able to check if the process has been successfull or not.</p>
           </Modal>
         </div>
 
@@ -270,20 +286,20 @@ const Contacts = (): JSX.Element => {
         )}
         <Modal
           open={isDeleteModalOpen}
-          onCancel={() => setIsDeleteModalOpen(false)}
+          onCancel={onCloseDeleteModal}
           destroyOnClose={true}
           className='delete-modal'
           centered
           footer={[
             <Button type='primary' size='large' className='button' key='deleteModalYesButton' onClick={onClickDeleteButtonInModal}>Yes</Button>,
-            <Button type='primary' size='large' className='button' key='deleteModalNoButton' onClick={() => setIsDeleteModalOpen(false)}>No</Button>
+            <Button type='primary' size='large' className='button' key='deleteModalNoButton' onClick={onCloseDeleteModal}>No</Button>
           ]} >
           <p>Are you sure you want to delete contact: {fullName}?</p>
           <p>Please note:</p>
           <p>Deleting a contact will not delete it into 'https://dummyjson.com/' server.</p>
-          <p>'dummyjson' is a fake data provider I used in this project.</p>
-          <p>Therefore, you still will be able to see it in contacts list.</p>
-          <p>However based on the notification you see on the bottom rigth side of the page you will be able to check if deleting has been successfull or not.</p>
+          <p>'Dummyjson' is a fake data provider I used in this project.</p>
+          <p>Therefore, you still will be able to see the deleted contact in contacts list.</p>
+          <p>However, based on the notification you see on the bottom rigth side of the page you will be able to check if deleting has been successfull or not.</p>
         </Modal>
       </div>
     </div>
