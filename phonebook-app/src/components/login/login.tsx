@@ -1,6 +1,6 @@
 /* #region  [- import -] */
 import { Form, Row, Col, Input, Button } from "antd";
-import { ChangeEvent, FC, useState } from "react"
+import { ChangeEvent, useState } from "react"
 import './login.css';
 import { useNavigate } from "react-router";
 import Notification from "../shared/components/notification/notification";

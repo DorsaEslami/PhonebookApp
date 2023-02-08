@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { ContactOutputDTO, Users } from "../../dtos/contactOutputDTO";
+import { ContactOutputDTO } from "../../dtos/contactOutputDTO";
 import { IContactService } from "../../services/interfaces/IContactService";
 import container, { TYPES } from "../../inversify.config";
 

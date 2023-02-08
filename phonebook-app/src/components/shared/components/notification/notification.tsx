@@ -3,7 +3,7 @@ import { notification } from "antd";
 import { IconType, NotificationPlacement } from "antd/es/notification/interface";
 import './notification.css';
 import { CheckOutlined, ExclamationCircleOutlined } from '@ant-design/icons';
-import { ReactNode, useEffect, } from "react";
+import { ReactNode, } from "react";
 
 /* #endregion */
 

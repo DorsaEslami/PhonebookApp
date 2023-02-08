@@ -1,5 +1,5 @@
 /* #region  [- import -] */
-import React, { FC, useEffect, useState, Suspense } from "react";
+import React, { FC, useState, Suspense } from "react";
 import './dashboard.css';
 import Menu from './menu/menu';
 import DashboardLoading from './dashboardLoading';
