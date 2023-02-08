@@ -1,27 +1,20 @@
 /* #region  [- import -] */
-import React, { FC, useEffect, useState } from "react";
+import React, { FC, useEffect, useState, Suspense } from "react";
 import './dashboard.css';
 import Menu from './menu/menu';
-import Loading from './loading';
+import DashboardLoading from './dashboardLoading';
 import { SelectInfo } from '../../../node_modules/rc-menu/lib/interface';
-import DefaultContent from './defaultContent/defaultContent';
-import Contacts from './contacts/contacts';
+const DefaultContent = React.lazy(() => import('./defaultContent/defaultContent'));
+const Contacts = React.lazy(() => import('./contacts/contacts'));
 /* #endregion */
 
 const Dashboard: FC = (): JSX.Element => {
 
   /* #region  [- useState -] */
-  const [isLoadingPageHidden, setIsLoadingPageHidden] = useState<boolean>(false);
   const [content, setContent] = useState<React.ReactNode>(<DefaultContent />);
   /* #endregion */
 
-  /* #region  [- setIsLoadingPageHidden -] */
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoadingPageHidden(true);
-    }, 3000);
-  }, [])
-  /* #endregion */
+
 
   /* #region  [- onClickMenueItem -] */
   const onClickMenueItem = (info: SelectInfo) => {
@@ -41,8 +34,9 @@ const Dashboard: FC = (): JSX.Element => {
   return (
     <div className="dashboard">
       <Menu onClickMenueItem={onClickMenueItem} />
-      <Loading isLoadingPageHidden={isLoadingPageHidden} />
-      <div hidden={!isLoadingPageHidden} className="dashboard-content">{content}</div>
+      <Suspense fallback={<DashboardLoading />}>
+        <div className="dashboard-content">{content}</div>
+      </Suspense>
     </div>
   );
   /* #endregion */

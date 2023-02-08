@@ -3,7 +3,7 @@ import { Form, Row, Col, Input, Button } from "antd";
 import { ChangeEvent, FC, useState } from "react"
 import './login.css';
 import { useNavigate } from "react-router";
-import Notification from "../shared/components/notification";
+import Notification from "../shared/components/notification/notification";
 /* #endregion */
 
 const Login = (): JSX.Element => {

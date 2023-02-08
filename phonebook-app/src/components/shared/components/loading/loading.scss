@@ -1,21 +1,9 @@
 @use "sass:map";
-@use '../shared/css/colors';
+@use '../../css/colors';
 
-.dashboard {
+.loading {
   width: 100%;
   height: 100%;
-  background-color: map.get(colors.$light-theme, 'background');
-}
-
-.dashboard-content {
-  width: 100%;
-  height: calc(100% - 60px);
-  background-color: map.get(colors.$light-theme, 'background');
-}
-
-.dashboard-loading {
-  width: 100%;
-  height: calc(100% - 60px);
 
   .loading-div {
     width: 24px;

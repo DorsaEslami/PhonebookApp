@@ -6,7 +6,7 @@ import { useAppSelector, useAppDispatch } from "../../../store/config/configureS
 import { useState } from 'react';
 import { getContact, getFilteredContacts, } from '../../../store/reducers/contactAction';
 import { Users } from '../../../dtos/contactOutputDTO';
-import Notification from "../../shared/components/notification";
+import Notification from "../../shared/components/notification/notification";
 import { ContactPostInputDTO } from '../../../dtos/contactPostInputDTO';
 import { ContactPutInputDTO } from '../../../dtos/ContactPutInputDTO';
 import { IContactService } from "../../../services/interfaces/IContactService";

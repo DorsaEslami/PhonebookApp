@@ -1,18 +1,15 @@
 /* #region  [- import -] */
-import '../dashboard/dashboard.css';
+import './loading.css';
 import { Spin } from 'antd';
-import { FC } from 'react';
 /* #endregion */
-interface Props {
-  isLoadingPageHidden: boolean
-}
-const Loading: FC<Props> = ({ isLoadingPageHidden }): JSX.Element => {
+
+const Loading = (): JSX.Element => {
 
 
   /* #region  [- return -] */
   return (
-    <div className="loading" hidden={isLoadingPageHidden}>
-      <div className='loading-loading-div'><Spin /></div>
+    <div className="loading">
+      <div className='loading-div'><Spin /></div>
       <img className='loading-img' src='../img/loading.png' alt="loading" />
       <div className='loading-text'>Loading....</div>
     </div>
