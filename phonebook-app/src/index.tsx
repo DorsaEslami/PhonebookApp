@@ -28,6 +28,7 @@ const defaultData: ThemeData = {
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 
+
 root.render(
   <ConfigProvider theme={{
     token: {
