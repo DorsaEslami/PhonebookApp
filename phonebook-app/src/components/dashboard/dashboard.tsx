@@ -14,8 +14,6 @@ const Dashboard: FC = (): JSX.Element => {
   const [content, setContent] = useState<React.ReactNode>(<DefaultContent />);
   /* #endregion */
 
-
-
   /* #region  [- onClickMenueItem -] */
   const onClickMenueItem = (info: SelectInfo) => {
     if (info.key === 'home') {
