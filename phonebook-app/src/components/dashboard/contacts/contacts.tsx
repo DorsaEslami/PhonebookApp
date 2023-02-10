@@ -10,7 +10,7 @@ import Notification from "../../shared/components/notification/notification";
 import { ContactPostInputDTO } from '../../../dtos/contactPostInputDTO';
 import { ContactPutInputDTO } from '../../../dtos/ContactPutInputDTO';
 import { IContactService } from "../../../services/interfaces/IContactService";
-import Container from '../../../dependencyContainer';
+import container, { TYPES } from "../../../inversify.config";
 import { ContactDeleteOutputDTO } from '../../../dtos/contactDeleteOutputDTO';
 const { Meta } = Card;
 const { Search } = Input;
@@ -73,7 +73,7 @@ const Contacts = (): JSX.Element => {
   /* #region  [- onClickDeleteButtonInModal -] */
   const onClickDeleteButtonInModal = async () => {
     if (id !== undefined) {
-      const contactService: IContactService = Container.getIContactService();
+      const contactService: IContactService = container.get<IContactService>(TYPES.IContactService);
       var response: ContactDeleteOutputDTO = await contactService.deleteContact(id);
       if (response.isDeleted) {
         Notification({ message: 'Deleted successfully', type: 'success' });
@@ -92,7 +92,7 @@ const Contacts = (): JSX.Element => {
   /* #region  [- postContactOnFinish -] */
   const postContactOnFinish = async ({ contact }: FormValues) => {
     var data = new ContactPostInputDTO(contact.firstName, contact.lastName, contact.age, contact.gender, contact.phone, contact.email);
-    const contactService: IContactService = Container.getIContactService();
+    const contactService: IContactService = container.get<IContactService>(TYPES.IContactService);
     var response: Users = await contactService.postContact(data);
     if (response) {
       Notification({ message: 'Added successfully', type: 'success' });
@@ -109,7 +109,7 @@ const Contacts = (): JSX.Element => {
   /* #region  [- putContactOnFinish -] */
   const putContactOnFinish = async ({ contact }: FormValues) => {
     var data = new ContactPutInputDTO(id, contact.firstName, contact.lastName, contact.age, contact.gender, contact.phone, contact.email);
-    const contactService: IContactService = Container.getIContactService();
+    const contactService: IContactService = container.get<IContactService>(TYPES.IContactService);
     var response: Users = await contactService.putContact(data);
     if (response) {
       Notification({ message: 'Edited successfully', type: 'success' });

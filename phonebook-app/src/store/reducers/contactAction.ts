@@ -1,14 +1,14 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { ContactOutputDTO } from "../../dtos/contactOutputDTO";
 import { IContactService } from "../../services/interfaces/IContactService";
-import Container from "../../dependencyContainer";
+import container, { TYPES } from "../../inversify.config";
 
 
 /* #region  [- getContact -] */
 export const getContact = createAsyncThunk(
   "contact/getContactStatus",
   async () => {
-    const contactService: IContactService = Container.getIContactService();
+    const contactService: IContactService = container.get<IContactService>(TYPES.IContactService);
     var response: ContactOutputDTO = await contactService.getContact();
     return response.users;
   }
@@ -19,7 +19,7 @@ export const getContact = createAsyncThunk(
 export const getFilteredContacts = createAsyncThunk(
   "contact/getFilteredContactsStatus",
   async (searchValue: string) => {
-    const contactService: IContactService = Container.getIContactService();
+    const contactService: IContactService = container.get<IContactService>(TYPES.IContactService);
     var response: ContactOutputDTO = await contactService.getFilteredContacts(searchValue);
     return response.users;
   }

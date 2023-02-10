@@ -1,10 +1,12 @@
 import axios from 'axios';
+import { injectable } from "inversify";
 import { ContactOutputDTO, Users } from '../../dtos/contactOutputDTO';
 import { IContactService } from '../interfaces/IContactService';
+import "reflect-metadata";
 import { ContactDeleteOutputDTO } from '../../dtos/contactDeleteOutputDTO';
 import { ContactPostInputDTO } from '../../dtos/contactPostInputDTO';
 import { ContactPutInputDTO } from '../../dtos/ContactPutInputDTO';
-
+@injectable()
 export class ContactService implements IContactService {
 
   getContact = async (): Promise<ContactOutputDTO> => {
