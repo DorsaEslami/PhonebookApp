@@ -16,7 +16,6 @@ const { Meta } = Card;
 const { Search } = Input;
 /* #endregion */
 
-
 const Contacts = (): JSX.Element => {
 
   /* #region  [- variable -] */
