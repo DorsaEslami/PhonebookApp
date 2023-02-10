@@ -1,8 +1,18 @@
+
+
 export class ContactPostInputDTO {
-  firstName: String = '';
-  lastName: string = '';
-  age: number | undefined = undefined;
-  gender: string | undefined = undefined;
-  phone: number | undefined = undefined;
-  email: string | undefined = undefined;
+  constructor(firstName: string, lastName: string, age: number, gender: string, phone: number, email: string) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+    this.gender = gender;
+    this.phone = phone;
+    this.email = email;
+  }
+  firstName: string;
+  lastName: string;
+  age: number;
+  gender: string;
+  phone: number;
+  email: string;
 }

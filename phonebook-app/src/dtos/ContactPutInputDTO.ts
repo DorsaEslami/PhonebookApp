@@ -1,9 +1,19 @@
 export class ContactPutInputDTO {
-  id: number | undefined = undefined;
-  firstName: String = '';
-  lastName: string = '';
-  age: number | undefined = undefined;
-  gender: string | undefined = undefined;
-  phone: number | undefined = undefined;
-  email: string | undefined = undefined;
+  constructor(id: number | undefined, firstName: string, lastName: string, age: number, gender: string, phone: number, email: string) {
+    this.id = id;
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+    this.gender = gender;
+    this.phone = phone;
+    this.email = email;
+  }
+
+  id: number | undefined;
+  firstName: string;
+  lastName: string;
+  age: number;
+  gender: string;
+  phone: number;
+  email: string;
 }

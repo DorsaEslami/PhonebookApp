@@ -91,14 +91,7 @@ const Contacts = (): JSX.Element => {
 
   /* #region  [- postContactOnFinish -] */
   const postContactOnFinish = async ({ contact }: FormValues) => {
-    var data: ContactPostInputDTO = {
-      firstName: contact.firstName,
-      lastName: contact.lastName,
-      age: contact.age,
-      gender: contact.gender,
-      phone: contact.phone,
-      email: contact.email,
-    }
+    var data = new ContactPostInputDTO(contact.firstName, contact.lastName, contact.age, contact.gender, contact.phone, contact.email);
     const contactService: IContactService = container.get<IContactService>(TYPES.IContactService);
     var response: Users = await contactService.postContact(data);
     if (response) {
@@ -115,15 +108,7 @@ const Contacts = (): JSX.Element => {
 
   /* #region  [- putContactOnFinish -] */
   const putContactOnFinish = async ({ contact }: FormValues) => {
-    var data: ContactPutInputDTO = {
-      id: id,
-      firstName: contact.firstName,
-      lastName: contact.lastName,
-      age: contact.age,
-      gender: contact.gender,
-      phone: contact.phone,
-      email: contact.email,
-    }
+    var data = new ContactPutInputDTO(id, contact.firstName, contact.lastName, contact.age, contact.gender, contact.phone, contact.email);
     const contactService: IContactService = container.get<IContactService>(TYPES.IContactService);
     var response: Users = await contactService.putContact(data);
     if (response) {
